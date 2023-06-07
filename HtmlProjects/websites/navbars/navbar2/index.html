@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome cdn -->
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            
+        }
+
+        #toggle,.label1{
+        display: none;
+        }
+        
+        #toggle1 {
+            display: none;
+        }
+        .vamsi{
+            display: flex;
+            padding-top: 14px;
+        }
+
+        @media(max-width:580px) 
+        {
+            .list {
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(249, 247, 248);
+            width: 100%;
+            padding: 20px;
+            display: none;
+                    }
+            
+            .label1{
+            display:block;
+            padding-top: 10px;
+
+            }
+
+            #toggle:checked ~ .list {
+            display: flex;
+
+      
+            }
+        }
+
+        .list1{
+            display: none;
+        }
+      #toggle1:checked~ .list1 {
+        flex-direction: column;
+        align-items: center;
+        background-color: aliceblue;
+        padding: 20px;
+        display: flex;
+      }
+
+    .logo{
+            /* padding-left: 5px; */
+            display: flex;
+            text-decoration: none;
+            justify-content: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;       
+
+        }
+        #log1 {
+            padding-top: px;
+        }
+       
+        nav {
+            position: sticky;
+            top: 0%;
+           background-color: rgb(241, 241, 245);
+           text-align: center;
+           padding: 10px;
+           flex-wrap: wrap;
+           height:60px;
+        }
+        nav li {
+            display: inline-block;
+            border-radius: 5px;
+        }
+        nav li.active{
+            background-color: blue;
+        }
+        nav li.active a {
+            color: white;
+        }
+        nav li  a{
+             text-decoration: none;
+             display: inline-block;
+             padding: 10px 20px;
+    
+        }
+        nav, ul ,li{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
+        
+       }
+
+       section {
+        height : 700px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color:rgb(252, 251, 251);
+       }
+       #Home {
+        background-color: rgb(106, 241, 10);
+       }
+       #Service {
+        background-color: rgb(234, 7, 192);
+       }
+       #About {
+        background-color: rgb(0, 17, 255);
+       }
+       #Login {
+        background-color: aqua;
+       }
+    </style>
+   
+</head>
+<body>
+    <nav>
+        <input type="checkbox"  id="toggle1">
+        <label for="toggle1" class="vamsi">
+            <i class="fa-solid fa-bars"></i>&nbsp;&nbsp;
+            <a href="#Home" class="logo" id="logo1">
+                Logo-Design
+            </a>
+        </label>
+        
+        <input type="checkbox"  id="toggle">
+        <label for="toggle" class="label1"><i class="fa-solid fa-bars"></i></label>
+        <ul class="list">
+            <li class="Home"><a href="#Home">Home</a></li>
+            <li class="Service"><a href="#Service">Service</a></li>
+            <li class="About"><a href="#About">About Us</a></li>
+            <li class="Login"><a href="#Login">Login</a></li>
+        </ul>
+        <ul class="list1">
+            <li class="Home"><a href="#Home">1</a></li>
+            <li class="Service"><a href="#Service">2</a></li>
+            <li class="About"><a href="#About">3</a></li>
+            <li class="Login"><a href="#Login">4</a></li>
+        </ul>
+    </nav>
+    <section id="Home">Home page</section>
+    <section id="Service">Service page</section>
+    <section id="About">About Us page</section>
+    <section id="Login">Login page</section>
+    <script src="script.js"></script>
+</body>
+</html>

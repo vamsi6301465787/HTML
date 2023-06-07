@@ -1,0 +1,38 @@
+/* combinator selector */
+
+div h2{
+    color: red;
+}
+
+div>h3,h4{
+    color:greenyellow
+}
+
+div+h1{
+    color:blue
+}
+
+div~h1{
+    color:yellow
+}
+
+
+
+/* pseudo class selector */
+
+a:link {
+    color: rgb(23, 219, 72)
+}
+
+a:hover{
+    color: red
+}
+
+a:visited{
+    color:blueviolet
+}
+
+
+a:active{
+    color:yellow
+} 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome cdn -->
+    <style type="text/css">
+      *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        color:#fff;
+        font-family: emoji;
+      }
+      .nav{
+        display: flex;
+        padding: 15px 20px;
+        justify-content: space-between; /* total content in that tag shifted center ,left ,right */
+        background-color: rgb(61, 7, 240);
+        flex-wrap: wrap;
+      }
+      .list{   
+        /* display: inline;   vertical line */
+        gap:20px; /*  the gap between the words  */
+        display: flex;  /* horiztal line */
+
+  
+         }
+
+      li {
+        list-style: none;
+      }
+      a{
+        text-decoration: none;   /* It is for removing or adding lines in bottom the word */
+        font-size: 18px;
+      }
+      #toggle,label{
+        display: none;
+      }
+
+      .logo{
+        padding-left: 10px;
+      }
+
+
+
+      @media(max-width:580px) {
+        .list {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 20px;
+          display: none;
+                }
+        
+        label{
+          display:block;
+
+        }
+
+        #toggle:checked ~ .list {
+        display: flex;
+
+      
+      }
+
+      }
+    </style>
+    
+</head  >
+<body>
+    <div class="nav">
+         <a href="http://" class="logo">Logo-Design</a>
+         <input type="checkbox"  id="toggle">
+         <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+         <ul class="list">
+           <li><a href="home.html">Home</a></li> 
+            <li><a href="service.html">Service</a></li>
+           <li><a href="aboutus.html">About us</a></li> 
+           <li><a href="login.html">Login</a></li>
+        </ul>
+
+    </div>
+</body>
+</html>
